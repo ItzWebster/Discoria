@@ -25,7 +25,7 @@ const commands = []
         commands.push(file)
     });
    const rest = new client.discord.REST().setToken(client.config.token);
-   await rest.put(client.discord.Routes.applicationCommands("1315121434112167946"), { body: commands }) 
+   await rest.put(client.discord.Routes.applicationCommands("bot id"), { body: commands }) 
    client.dbl.postBotCommands(commands);
 
 }
@@ -34,9 +34,9 @@ eventFiles.map(async (filePaths) => require(filePaths));
 mongoose.set('strictQuery', false); 
 mongoose.connect(client.config.mongooseConnectionString, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.connection.on("connected", () => {
- console.log(`Mongoose Database connected to Discoria on Shard ${client.shard.ids}.`)
+ console.log(`Mongoose Database connected to bot name on Shard ${client.shard.ids}.`)
 });
 mongoose.connection.on("disconnected", () => {
-  console.log(`Mongoose Database disconnected from Discoria on Shard ${client.shard.ids}.`)
+  console.log(`Mongoose Database disconnected from bot name on Shard ${client.shard.ids}.`)
 });
 };
