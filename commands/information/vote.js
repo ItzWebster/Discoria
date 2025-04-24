@@ -5,8 +5,6 @@ module.exports = {
   name: "vote",
   description: "Vote me on top.gg",
   type: ApplicationCommandType.ChatInput,
-  integration_types: [0, 1],
-  contexts: [0, 1, 2],
   run: async (client, interaction) => {
    let TOPGG = await client.database.user.findOne({ id: interaction.user.id });
     if (!TOPGG) {
