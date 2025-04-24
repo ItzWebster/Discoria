@@ -1,8 +1,8 @@
 {
-    "token": "MTMxNTEyMTQzNDExMjE2Nzk0Ng.GlFj78.HIhOJ2Ugp4UWIJoBC8o3M9DVYodu1bLamr6fNE",
-    "TopggToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEzMTUxMjE0MzQxMTIxNjc5NDYiLCJib3QiOnRydWUsImlhdCI6MTczNDAxMDgyMX0.newKIH2GOFe3NFxCRc8rA5VuFbe7hUqpdhPv6D2MMWk",
-    "dbl": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoxLCJpZCI6IjEzMTUxMjE0MzQxMTIxNjc5NDYiLCJpYXQiOjE3MzY3NDgyNTd9.tIt0PKn7tR5A9yQk9SpHMMCBNv12VubB2r3moWJollk",
-    "supportserver": "https://discord.gg/zb5ZTKHuSn",
-    "owners": ["481068576363773972"],
-    "mongooseConnectionString": "mongodb://Discoria:AmazingBoy5613@localhost:27017/data?authSource=admin"
+    "token": "",
+    "TopggToken": "",
+    "dbl": "",
+    "supportserver": "",
+    "owners": [""],
+    "mongooseConnectionString": ""
 }
