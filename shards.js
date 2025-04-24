@@ -17,7 +17,7 @@ manager.on('shardCreate', (shard) => {
      console.log(spawn);
      shardLogs.send({
          username: 'Shards Logs',
-         avatarURL: 'https://discoria.xyz/image/discoria.png',
+         avatarURL: '',
          embeds: [new EmbedBuilder()
         .setTitle(spawn)
         .setColor("Green")
@@ -30,7 +30,7 @@ manager.on('shardCreate', (shard) => {
         console.log(ready);
         shardLogs.send({
          username: 'Shards Logs',
-         avatarURL: 'https://discoria.xyz/image/discoria.png',
+         avatarURL: '',
          embeds: [new EmbedBuilder()
         .setTitle(ready)
         .setColor("Green")
@@ -43,7 +43,7 @@ manager.on('shardCreate', (shard) => {
         console.log(disconnect);
         shardLogs.send({
             username: 'Shards Logs',
-            avatarURL: 'https://discoria.xyz/image/discoria.png',
+            avatarURL: '',
             embeds: [new EmbedBuilder()
             .setTitle(disconnect)
             .setColor("Red")
@@ -55,7 +55,7 @@ manager.on('shardCreate', (shard) => {
             console.log(broke)
             shardLogs.send({
             username: 'Shards Logs',
-            avatarURL: 'https://discoria.xyz/image/discoria.png',
+            avatarURL: '',
             embeds: [new EmbedBuilder()
             .setTitle(broke)
             .setColor("Red")
@@ -69,7 +69,7 @@ manager.on('shardCreate', (shard) => {
         console.log(death);
         shardLogs.send({
             username: 'Shards Logs',
-            avatarURL: 'https://discoria.xyz/image/discoria.png',
+            avatarURL: '',
             embeds: [new EmbedBuilder()
             .setTitle(death)
             .setColor("Red")
@@ -82,7 +82,7 @@ manager.on('shardCreate', (shard) => {
         console.log(err)
         shardLogs.send({
             username: 'Shards Logs',
-            avatarURL: 'https://discoria.xyz/image/discoria.png',
+            avatarURL: '',
             embeds: [new EmbedBuilder()
             .setTitle(err)
             .setColor("Red")
