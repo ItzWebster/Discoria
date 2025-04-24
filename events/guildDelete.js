@@ -31,5 +31,5 @@ const owner = await client.users.fetch(guild.ownerId);
     } else {
         embed.setThumbnail(client.user.displayAvatarURL({ size: 1024 }));
     }
- webhookClient.send({ username: 'Guilds Logs', avatarURL: 'https://discoria.xyz/image/discoria.png', embeds: [embed] }).catch(() => {});
+ webhookClient.send({ username: 'Guilds Logs', avatarURL: client.user.displayAvatarURL({ dynamic: true }), embeds: [embed] }).catch(() => {});
 })
