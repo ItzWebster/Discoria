@@ -1,5 +1,5 @@
 const client = require("../index.js")
-const channel = new client.discord.WebhookClient({ url: "https://discord.com/api/webhooks/1315129318854234192/-Dh9lnYzcXHOrSM1tnwsMJC3_i00AzzGIFSI1p6Z7Qqoi6n0YRGQ_XojKir90uZpo0W-" });
+const channel = new client.discord.WebhookClient({ url: "" });
 client.on(client.discord.Events.GuildCreate, async (Guild) => {
 if (!Guild?.available) return;
 const owner = await client.users.fetch(Guild.ownerId);
