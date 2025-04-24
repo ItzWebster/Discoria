@@ -1,8 +1,8 @@
 const { token, TopggToken } = require("./config.json")
 const { AutoPoster } = require('topgg-autoposter')
 const { ShardingManager, EmbedBuilder, WebhookClient, ShardEvents, codeBlock } = require("discord.js")
-const shardLogs = new WebhookClient({ url: "https://discord.com/api/webhooks/1315128079022293045/P0chHmZPlErVZjfM8_zyUy--pEhYeIQW_73zV6Kj-D2DixvsScvD7Rb1IzabK-RIdVI7" });
-const errorLogs = new WebhookClient({ url: "https://discord.com/api/webhooks/1315128194642350180/hKTm22guvTg4ACCgFQH4jcQa68pjeTGyUr4hXLAAYiW-T8a9eN-v6aN-rd_qs2OWo2fr" });
+const shardLogs = new WebhookClient({ url: "" });
+const errorLogs = new WebhookClient({ url: "" });
 
 const manager = new ShardingManager("./index.js", {
   respawn: true,
