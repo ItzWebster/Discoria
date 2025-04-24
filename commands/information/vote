@@ -1,0 +1,46 @@
+const { ActionRowBuilder, EmbedBuilder, ButtonBuilder, ApplicationCommandType, ButtonStyle } = require("discord.js");
+const Topgg = require('@top-gg/sdk')
+
+module.exports = {
+  name: "vote",
+  description: "Vote me on top.gg",
+  type: ApplicationCommandType.ChatInput,
+  integration_types: [0, 1],
+  contexts: [0, 1, 2],
+  run: async (client, interaction) => {
+   let TOPGG = await client.database.user.findOne({ id: interaction.user.id });
+    if (!TOPGG) {
+        TOPGG = new client.database.user({
+            id: interaction.user.id,
+            totalvotes: 0,
+            votedAt: 0,
+            removeAt: 0,
+        });
+     await totalVotes.save()
+    }
+    let voted = await client.topgg.hasVoted(interaction.user.id)
+    if (!voted) {
+      const Embed1 = new EmbedBuilder()
+        .setColor(client.color)
+        .setDescription(`Vote for ${client.user.username} [here](https://top.gg/bot/${client.user.id}/vote) on top.gg to support ${client.user.username} and help it grow!!`)
+        let buttonun = new ButtonBuilder()
+        .setLabel("Vote")
+        .setStyle(ButtonStyle.Link)
+         .setURL(`https://top.gg/bot/${client.user.id}/vote`);
+
+ let Row1 = new ActionRowBuilder().addComponents(buttonun)
+      interaction.reply({ embeds: [Embed1], components: [Row1] })
+    } else if(voted){
+   const lastVoted = userV.lastVoted;
+    const voteMs = 1000 * 60 * 60 * 12;
+    const resolve = new Date() - lastVoted;
+    const remainingTime = voteMs - resolve;
+   const remainingTimeHours = Math.floor(remainingTime / (1000 * 60 * 60));
+   const remainingTimeMinutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const Embed2 = new EmbedBuilder()
+        .setColor(client.color)
+        .setDescription(`You have already voted for ${client.user.username}, You can vote in ${remainingTimeHours == 1 ? `**${remainingTimeHours}** hour` : `**${remainingTimeHours}** hours`}, ${remainingTimeMinutes == 1 ? `**${vote_remainingTimeMinutes}** minute` : `**${remainingTimeMinutes}** minutes`}`)
+      interaction.reply(({embeds: [Embed2] }))
+    }
+  }
+};
