@@ -10,7 +10,7 @@ client.on(client.discord.Events.GuildMemberAdd, async (member) => {
             const context = canvas.getContext("2d");
             context.font = "72px sans-serif";
             context.fillStyle = "#ffffff";
-            const img = await loadImage("https://discoria.xyz/image/welcome.png");
+            const img = await loadImage("https://discoria.xyz/image/welcome.png"); //keep this if you want to but if you're gonna change it, it needs to be a url
             context.drawImage(img, 0, 0, 1024, 500);
             context.fillText("Welcome", 360, 360);
             context.beginPath();
