@@ -1,5 +1,5 @@
 const { Webhook } = require("@top-gg/sdk");
-const webhook = new Webhook("AmazingBoy5613")
+const webhook = new Webhook("")
 const express = require('express');
 const app = express(); 
 const undici = require('undici');
@@ -9,7 +9,6 @@ const stats = {
     userCount: 0,
     shards: []
 }
-const User = require('../models/spotifyTrackerSystem');
 
 module.exports = async (manager) => {
 app.use((req, res, next) => {
@@ -124,9 +123,9 @@ await manager.broadcastEval(async (client, { vote }) => {
     const votes = data.totalvotes;
     const time = data.removeAt - Date.now();
     const user = await client.users.fetch(vote.user).catch(err => { });
-    const guild = client.guilds.cache.get("1315121712865607752");
-    const channel = guild.channels.cache.get("1315121713381638182");
-    const role = guild.roles.cache.get("1315121712865607755");
+    const guild = client.guilds.cache.get(""); //support server id
+    const channel = guild.channels.cache.get(""); // votes channel id
+    const role = guild.roles.cache.get(""); // voters role id
     const member = await guild.members.fetch(vote.user).catch(err => { });
     channel.send({ embeds: [new client.discord.EmbedBuilder()
     .setThumbnail(user.displayAvatarURL({ dynamic: true, size: 64 }))
