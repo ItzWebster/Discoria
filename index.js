@@ -1,7 +1,5 @@
 const { Client, Collection, EmbedBuilder, GatewayIntentBits, Partials, WebhookClient, codeBlock } = require("discord.js");
-const User = require('./models/User.js');
 const Handler = require("./handlers/handler");
-const Topgg = require('@top-gg/sdk')
 
 const client = new Client({ 
     intents: [
@@ -31,12 +29,10 @@ const client = new Client({
 module.exports = client;
 
 client.config = require("./config.json");
-client.topgg = new Topgg.Api(client.config.TopggToken);
 client.commands = new Collection();
 client.context = new Collection();
 client.setMaxListeners(0);
 client.color = "#1ABC9C";
-client.database = { user: User };
 client.discord = require('discord.js');
 Handler(client)
 
