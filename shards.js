@@ -92,7 +92,6 @@ manager.on('shardCreate', (shard) => {
   });
 })
 manager.spawn({ amount: manager.totalShards }).then(() => {
- require("./servers/server.js")(manager)
  manager.broadcastEval(fetchAndSetActivity)
  setInterval(() => {
  manager.broadcastEval(fetchAndSetActivity)
